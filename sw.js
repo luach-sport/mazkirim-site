@@ -38,7 +38,10 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(
       fetch(req)
         .then((res) => {
-          if (res.ok && url.pathname === scope) caches.open(CACHE).then((c) => c.put(scope, res.clone()))
+          if (res.ok && url.pathname === scope) {
+            const copy = res.clone() // clone now, before the browser starts reading the body
+            caches.open(CACHE).then((c) => c.put(scope, copy)).catch(() => {})
+          }
           return res
         })
         .catch(() => caches.match(scope).then((r) => r || Response.error())),
