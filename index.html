@@ -2,6 +2,8 @@
 <html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://apis.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: https:; connect-src 'self' https:; frame-src https://mazkirim.firebaseapp.com https://accounts.google.com https://apis.google.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0B1626" />
     <meta property="og:title" content="מזכירים · Mazkirim — תפילה במקומות הקדושים" />
@@ -16,14 +18,32 @@
     <meta property="og:locale:alternate" content="en_US" />
     <meta name="twitter:card" content="summary" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mazkirim · מזכירים","url":"https://luach-sport.github.io/mazkirim-site/","description":"Send a name to be prayed for by a verified mitpalel at the Kotel, Meron and holy sites. שליחת שמות לתפילה בכותל, במירון ובקברי הצדיקים."}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-CFT80pLQ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B89ap-6z.css">
+    <style>
+      html,body{background:#0b1626;margin:0}
+      .boot{min-height:100vh;color:#f5efe2;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+      .boot-h{height:68px;display:flex;align-items:center;gap:10px;padding:0 20px;border-bottom:1px solid rgba(212,166,74,.18)}
+      .boot-logo{width:34px;height:34px;border-radius:10px;border:2px solid #d4a64a}
+      .boot-n{font:700 20px Georgia,serif;color:#ebcb85}
+      .boot-m{max-width:720px;margin:0 auto;padding:56px 20px;display:grid;gap:18px}
+      .boot-s{border-radius:12px;background:linear-gradient(90deg,rgba(245,239,226,.05) 25%,rgba(245,239,226,.12) 37%,rgba(245,239,226,.05) 63%);background-size:400% 100%;animation:bs 1.4s ease infinite}
+      @keyframes bs{0%{background-position:100% 50%}100%{background-position:0 50%}}
+      @media (prefers-reduced-motion:reduce){.boot-s{animation:none}}
+    </style>
+    <script type="module" crossorigin src="./assets/index-BgXf3jKn.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CTHVdW10.css">
   </head>
   <body>
     <div id="root">
+      <div class="boot" aria-busy="true">
+        <div class="boot-h"><span class="boot-logo"></span><span class="boot-n">מזכירים</span></div>
+        <div class="boot-m">
+          <div class="boot-s" style="height:16px;width:40%"></div>
+          <div class="boot-s" style="height:44px;width:85%"></div>
+          <div class="boot-s" style="height:44px;width:65%"></div>
+          <div class="boot-s" style="height:84px;margin-top:14px"></div>
+          <div class="boot-s" style="height:84px"></div>
+        </div>
+      </div>
       <noscript>
         <h1>מזכירים — תפילה במקומות הקדושים</h1>
         <p>שולחים שם, ומתפלל מאומת שנמצא במקום מתפלל עליכם בכותל המערבי, במירון, בקבר רחל ובקברי הצדיקים, ומעדכן אתכם במייל.</p>
